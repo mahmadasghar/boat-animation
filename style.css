@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.water{
+    width: 500%;
+    height: 200px;
+    display: block;
+    background-image: url(water.png);
+    position: absolute;
+    bottom: -53px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-y;
+    animation: water 15s linear infinite;
+}
+.boat{
+    width: 400px;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.boat img{
+    width: 100%;
+    animation: boat 3s linear infinite;
+}
+/* KEYFRAMES ANIMATION*/
+@keyframes water{
+    100%{
+        transform: translateX(-300px);
+    }
+}
+@keyframes boat{
+    100%{
+        transform: translateY(-3px);
+    }
+    50%{
+        transform: translateY(3px);
+    }
+    0%{
+        transform: translateY(-3px);
+    }
+}
