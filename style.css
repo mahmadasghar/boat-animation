@@ -22,14 +22,14 @@
     right: 0;
     display: block;
     z-index: 1;
-    background-repeat: repeat-y;
-    animation: water 15s linear infinite;
+    background-repeat: repeat-x;
+    transform: translateX(-50%);
+    animation: water 50s linear infinite;
 }
 .boat{
     width: 400px;
     left: 50%;
     bottom: 70px;
-    transform: translateX(-50%);
     position: absolute;
     z-index: 2;
 }
@@ -40,7 +40,7 @@
 /* KEYFRAMES ANIMATION*/
 @keyframes water{
     100%{
-        transform: translateX(-300px);
+        transform: translateX(300px);
     }
 }
 @keyframes boat{
